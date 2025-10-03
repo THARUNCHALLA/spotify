@@ -4,8 +4,10 @@ import FeaturedCharts from './Components/FeaturedCharts';
 import AlbumDetails from './Components/AlbumDetails';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 function App() {
   return (
+    <>
     <div className="flex flex-row bg-black text-white h-[90vh]">
       <div className="w-[20%]">
         <Sidebar />
@@ -21,6 +23,8 @@ function App() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
