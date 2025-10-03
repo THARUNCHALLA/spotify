@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setCurrentSong } from "./redux"
 import { albumsData, songsData, assets } from "../assets/Data";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const FeaturedCharts = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const currentSong = useSelector((state) => state.playlist.currentSong);
 
   const [data, setData] = useState(
     songsData.map((song) => ({ ...song, toggle: false }))
