@@ -34,40 +34,41 @@ const FeaturedCharts = () => {
 
   return (
     <div className="flex-1 p-6">
-      <h3 className="text-2xl font-bold mb-6 text-white">Featured Charts</h3>
-
-      {/* Albums */}
-      <div className="flex flex-row gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth mx-4">
+      <h3 className="text-lg lg:text-2xl font-bold mb-2 lg:mb-6 text-white">Featured Charts</h3>
+      <div className="flex flex-row gap-4 sm:gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth px-2 lg:px-4">
         {albumsData.map((album) => (
           <div
             key={album.id}
-            className="flex flex-col rounded-xl p-5 hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[180px]"
+            className="flex flex-col lg:rounded-xl p-4 sm:p-5 hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[120px] sm:min-w-[150px] lg:min-w-[180px]"
             onClick={() => onNavigateToAlbum(album.id)}
           >
             <img
               src={album.image}
               alt={album.name}
-              className="w-40 h-40 object-cover mb-4 rounded-xl"
+              className="w-24 h-24 sm:w-28 sm:h-28 lg:w-40 lg:h-40 object-cover mb-2 sm:mb-4 rounded-xl"
             />
-            <h4 className="text-white font-semibold text-sm">{album.name}</h4>
-            <p className="text-gray-300 text-xs mt-2">{album.desc}</p>
+            <h4 className="text-white font-semibold text-sm sm:text-base truncate lg:block">
+              {album.name}
+            </h4>
+            <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate lg:block">
+              {album.desc}
+            </p>
           </div>
         ))}
       </div>
-      <h3 className="text-2xl font-bold mb-6 text-white mt-8">Today's biggest hits</h3>
-      <div className="flex flex-row gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth mx-4">
+      <h3 className="text-lg lg:text-2xl font-bold mb-6 text-white mt-4 lg:mt-8">Today's biggest hits</h3>
+      <div className="flex flex-row gap-4 sm:gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth px-2 lg:px-4 mt-4 lg:mt-8">
         {data.map((song) => (
           <div
             key={song.id}
-            className="flex flex-col rounded-xl p-4 min-w-[180px] hover:scale-105 transition-transform duration-300 snap-start group"
+            className="flex flex-col lg:rounded-xl p-4 sm:p-5 hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[120px] sm:min-w-[150px] lg:min-w-[180px]"
           >
             <div className="relative">
               <img
                 src={song.image}
                 alt={song.name}
-                className="w-40 h-40 object-cover mb-4 rounded-xl"
+                className="w-24 h-24 sm:w-28 sm:h-28 lg:w-40 lg:h-40 object-cover mb-2 sm:mb-4 rounded-xl"
               />
-
               {song.toggle ? (
                 <img
                   src={assets.pause_icon}
@@ -84,11 +85,12 @@ const FeaturedCharts = () => {
                 />
               )}
             </div>
-            <h4 className="text-white font-semibold text-sm">{song.name}</h4>
-            <p className="text-gray-300 text-xs mt-2">{song.desc}</p>
+            <h4 className="text-white font-semibold text-sm sm:text-base truncate">{song.name}</h4>
+            <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate">{song.desc}</p>
           </div>
         ))}
       </div>
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Library from "./Library";
 
 const Sidebar = () => {
   return (
-    <div className="p-4 space-y-2">
+    <div className="p-4 space-y-2 hidden lg:block">
       <Home />
       <Library />
     </div>
