@@ -41,7 +41,7 @@ const FeaturedCharts = () => {
                 {albumsData.map((album) => (
                     <div
                         key={album.id}
-                        className="flex flex-col rounded-xl p-5 hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group"
+                        className="flex flex-col rounded-xl p-5 hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[180px]"
                         onClick={() => onNavigateToAlbum(album.id)}
                     >
                         <img
