@@ -2,7 +2,7 @@ import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { useSelector, useDispatch } from "react-redux";
-import { setCurrentSong } from "./redux"; // adjust path if needed
+import { setCurrentSong } from "./redux"; 
 
 const Footer = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <div className="fixed bottom-0 left-0 w-full z-50">
       <div className="w-full bg-[#181818] shadow-lg h-20 flex items-center px-4">
-        <div className="flex items-center gap-3 w-[300px]">
+        <div className="flex items-center gap-3 w-[300px] lg:block hidden">
           <img
             src={currentSong.image}
             alt={currentSong.name}
