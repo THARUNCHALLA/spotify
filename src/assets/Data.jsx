@@ -98,9 +98,9 @@ export const assets = {
 export const albumsData = [
   {
     id: 0,
-    name: "Top 50 Global",
+    name: "Top 20 Hits by Anirudh",
     image: img8,
-    desc: "Your weekly update of the most played tracks",
+    desc: "The hottest Anirudh tracks trending worldwide",
     bgColor: "#2a4365"
   },
   {
@@ -126,7 +126,7 @@ export const albumsData = [
   },
   {
     id: 4,
-    name: "Mega Hits,",
+    name: "Mega Hits",
     image: img11,
     desc: "Your weekly update of the most played tracks",
     bgColor: "#234e52"
@@ -178,7 +178,7 @@ export const songsData = [
     toggle: false
   },
   {
-    id:5,
+    id: 5,
     name: "Song Five",
     image: img5,
     file: song2,
@@ -187,7 +187,7 @@ export const songsData = [
     toggle: false
   },
   {
-    id:6,
+    id: 6,
     name: "Song Six",
     image: img14,
     file: song3,
@@ -196,7 +196,7 @@ export const songsData = [
     toggle: false
   },
   {
-    id:7,
+    id: 7,
     name: "Song Seven",
     image: img7,
     file: song1,

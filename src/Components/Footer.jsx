@@ -1,4 +1,3 @@
-import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 bg-[#121212] shadow-lg">
+    <div className="fixed bottom-6 left-0 w-full z-50 bg-[#121212] shadow-lg">
       <div className="flex flex-col sm:flex-row items-center justify-between h-24 px-3 sm:px-6">
         <div className="flex items-center gap-3 w-full sm:w-1/3 mb-2 sm:mb-0">
           <img

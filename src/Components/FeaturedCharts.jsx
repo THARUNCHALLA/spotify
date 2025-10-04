@@ -46,22 +46,21 @@ const FeaturedCharts = () => {
           <img src={assets.plays_icon} alt="charts" className="w-6 h-6" />
           Featured Charts
         </h3>
-
         <div className="flex flex-row flex-wrap sm:flex-nowrap gap-4 sm:gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth px-2 lg:px-4">
           {albumsData.map((album) => (
             <div
               key={album.id}
               onClick={() => onNavigateToAlbum(album.id)}
-              className="flex flex-row bg-neutral-800 sm:flex-col sm:bg-gray-900/60 sm:rounded-xl p-4 sm:p-5 w-[46%] sm:min-w-[160px] lg:min-w-[180px] cursor-pointer group
+              className="flex flex-row bg-neutral-800 sm:flex-col sm:bg-gray-900/60 sm:rounded-xl sm:p-5 w-[46%] sm:min-w-[160px] lg:min-w-[180px] cursor-pointer group
                    sm:hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.2)] sm:hover:scale-105 transition-transform duration-300 snap-start"
             >
               <img
                 src={album.image}
                 alt={album.name}
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-40 md:h-40 object-cover rounded-sm md:rounded-xl mb-2 sm:mb-4"
+                className="w-14 h-full sm:w-14 sm:h-14 md:w-40 md:h-40 object-cover rounded-sm md:rounded-xl mb-2 sm:mb-4"
               />
 
-              <h4 className="text-white font-semibold text-sm sm:text-base sm:truncate">{album.name}</h4>
+              <h4 className="text-white font-semibold text-sm sm:text-base sm:truncate my-auto mx-4 sm:mx-0 sm:my-0">{album.name}</h4>
               <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate hidden sm:block">
                 {album.desc}
               </p>
@@ -70,7 +69,7 @@ const FeaturedCharts = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-yellow-600/30 via-orange-600/20 to-red-700/20 rounded-2xl p-4 sm:p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-yellow-600/30 via-orange-600/20 to-red-700/20 rounded-2xl p-4 sm:p-6 shadow-lg mt-6 sm:mt-10">
         <h3 className="flex items-center gap-2 text-lg lg:text-2xl font-bold mb-4 text-white">
           <img src={assets.mic_icon} alt="NTR" className="w-6 h-6" />
           NTR Biggest Hits
@@ -112,9 +111,7 @@ const FeaturedCharts = () => {
           ))}
         </div>
       </div>
-
-      {/* Today's Hits */}
-      <div className="bg-gradient-to-r from-blue-700/30 via-cyan-600/20 to-emerald-600/20 rounded-2xl p-4 sm:p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-700/30 via-cyan-600/20 to-emerald-600/20 rounded-2xl p-4 sm:p-6 shadow-lg mt-6 sm:mt-0">
         <h3 className="flex items-center gap-2 text-lg lg:text-2xl font-bold mb-4 text-white">
           <img src={assets.like_icon} alt="today" className="w-6 h-6" />
           Today's Biggest Hits
