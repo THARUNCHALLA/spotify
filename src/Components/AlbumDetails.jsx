@@ -21,7 +21,11 @@ const AlbumDetails = () => {
         );
         console.log(updatedData, "updatedData");
         setData(updatedData);
-        dispatch(setCurrentSong(song));
+        const data = {
+            updateData: updatedList,
+            song: song
+        }
+        dispatch(setCurrentSong(data));
     };
     const stopSong = (song) => {
         const updatedData = data.map((s) =>

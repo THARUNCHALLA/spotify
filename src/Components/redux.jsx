@@ -9,22 +9,18 @@ const playlistSlice = createSlice({
   name: "playlist",
   initialState,
   reducers: {
-    addSong: (state, action) => {
-      state.songs.push(action.payload);
-    },
-    removeSong: (state, action) => {
-      state.songs = state.songs.filter(song => song.id !== action.payload);
-    },
     setCurrentSong: (state, action) => {
-      state.currentSong = action.payload;
+      const { updateData, song } = action.payload;
+      state.songs = updateData;
+      state.currentSong = song;
     },
   },
 });
 
-export const { addSong, removeSong, setCurrentSong } = playlistSlice.actions;
+export const { setCurrentSong } = playlistSlice.actions;
 
 export const store = configureStore({
   reducer: {
-    playlist: playlistSlice.reducer, 
+    playlist: playlistSlice.reducer,
   },
 });

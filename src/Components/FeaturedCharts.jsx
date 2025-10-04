@@ -24,7 +24,11 @@ const FeaturedCharts = () => {
       s.id === song.id ? { ...s, toggle: true } : { ...s, toggle: false }
     );
     setList(updatedList);
-    dispatch(setCurrentSong(song));
+    const data = {
+      updateData: updatedList,
+      song: song
+    }
+    dispatch(setCurrentSong(data));
   };
 
   const stopSong = (song, list, setList) => {
