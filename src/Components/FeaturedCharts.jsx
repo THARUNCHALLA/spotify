@@ -41,33 +41,35 @@ const FeaturedCharts = () => {
 
   return (
     <div className="flex-1 p-6 space-y-10">
-      {/* Featured Charts Section */}
-      <div className="bg-gradient-to-r from-indigo-900/40 via-purple-800/30 to-pink-700/20 rounded-2xl p-4 sm:p-6 shadow-lg">
-        <h3 className="flex items-center gap-2 text-lg lg:text-2xl font-bold mb-4 text-white">
+      <div className="sm:bg-gradient-to-r sm:from-indigo-900/40 sm:via-purple-800/30 sm:to-pink-700/20 sm:rounded-2xl p-4 sm:p-6 sm:shadow-lg">
+        <h3 className="hidden sm:flex items-center gap-2 text-lg lg:text-2xl font-bold mb-4 text-white">
           <img src={assets.plays_icon} alt="charts" className="w-6 h-6" />
           Featured Charts
         </h3>
-        <div className="flex flex-row gap-4 sm:gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth px-2 lg:px-4">
+
+        <div className="flex flex-wrap sm:flex-nowrap flex-row gap-4 sm:gap-6 overflow-x-scroll scrollbar-hide snap-x scroll-smooth px-2 lg:px-4">
           {albumsData.map((album) => (
             <div
               key={album.id}
-              className="flex flex-col rounded-xl p-4 sm:p-5 bg-gray-900/60 hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[140px] sm:min-w-[160px] lg:min-w-[180px]"
               onClick={() => onNavigateToAlbum(album.id)}
+              className="flex flex-row bg-neutral-800 sm:flex-col sm:bg-gray-900/60 sm:rounded-xl p-4 sm:p-5 min-w-[140px] sm:min-w-[160px] lg:min-w-[180px] cursor-pointer group
+                   sm:hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.2)] sm:hover:scale-105 transition-transform duration-300 snap-start"
             >
-
               <img
                 src={album.image}
                 alt={album.name}
-                className="w-[50px] h-[50px] md:w-40 md:h-40 object-cover mb-2 sm:mb-4 rounded-sm md:rounded-xl"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-40 md:h-40 object-cover rounded-sm md:rounded-xl mb-2 sm:mb-4"
               />
 
-
               <h4 className="text-white font-semibold text-sm sm:text-base truncate">{album.name}</h4>
-              <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate">{album.desc}</p>
+              <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate hidden md:block">
+                {album.desc}
+              </p>
             </div>
           ))}
         </div>
       </div>
+
 
       {/* NTR Songs */}
       <div className="bg-gradient-to-r from-yellow-600/30 via-orange-600/20 to-red-700/20 rounded-2xl p-4 sm:p-6 shadow-lg">
