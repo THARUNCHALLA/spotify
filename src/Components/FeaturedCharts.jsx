@@ -54,11 +54,14 @@ const FeaturedCharts = () => {
               className="flex flex-col rounded-xl p-4 sm:p-5 bg-gray-900/60 hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform duration-300 snap-start cursor-pointer group min-w-[140px] sm:min-w-[160px] lg:min-w-[180px]"
               onClick={() => onNavigateToAlbum(album.id)}
             >
+
               <img
                 src={album.image}
                 alt={album.name}
-                className="h-[120px] lg:w-40 lg:h-40 object-cover mb-2 sm:mb-4 rounded-xl"
+                className="w-[50px] h-[50px] md:w-40 md:h-40 object-cover mb-2 sm:mb-4 rounded-sm md:rounded-xl"
               />
+
+
               <h4 className="text-white font-semibold text-sm sm:text-base truncate">{album.name}</h4>
               <p className="text-gray-300 text-xs sm:text-sm mt-1 sm:mt-2 truncate">{album.desc}</p>
             </div>
