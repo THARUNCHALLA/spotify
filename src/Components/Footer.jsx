@@ -7,6 +7,7 @@ import { setCurrentSong } from "./redux";
 const Footer = () => {
   const dispatch = useDispatch();
   const currentSong = useSelector((state) => state.playlist.currentSong);
+  console.log(currentSong);
 
   if (!currentSong) return null;
 
